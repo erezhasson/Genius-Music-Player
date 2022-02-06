@@ -1,0 +1,10 @@
+.app_content {
+  display: grid; 
+  grid-template-columns: 0.1fr 1.1fr; 
+  grid-template-rows: 1.7fr 0.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "vertical-menu content-placeholder"
+    "vertical-menu music-player"; 
+  height: 100%;
+}

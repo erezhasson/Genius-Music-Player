@@ -1,72 +1,28 @@
 import React, {useState} from 'react'
-import { BiMenu, BiX } from "react-icons/bi";
-import {Button} from '../../Globalstyles';
-import 
-{
-    Nav,
-    NavbarContainer,
-    NavLogo,
-    NavIcon,
-    MenuItem,
-    MenuIcon,
-    Menu,
-    MenuLink,
-    MenuItemBtn,
-    MenuLinkBtn
-} from './NavBar.styles';
+
+import "./navbar.css"
 
 export const Navbar = () => {
-//click is the initial state and setclick will be the update state
-    const [click, setClick] = useState(false);
-
-//Create a function to handle the click state of the menu icon. 
-//if the menu icon was the menu bar at the beginning when clicked it will have the close icon
-    const handleClick = () => setClick(!click);
-
-    const closeMenu = () => console.log("CLOSED");
-    
     return (
-        <div>
-            {/* <IconContext.Provider value={{ color: '#fff'}}>  */}
-                <Nav>
-                    <NavbarContainer>
-                        <NavLogo to="/">
-                            <NavIcon src={process.env.PUBLIC_URL + "GMP.png"}/>
-                        </NavLogo>
-                        <MenuIcon onClick={handleClick}>
-                            {click ? <BiX/> : <BiMenu/>}
-                        </MenuIcon>
+        <>
+            <nav id="vertical-menu">
+                <div className="nav-header">
+                    <img src={process.env.PUBLIC_URL + '/GMP.png'} alt="logo" className="header-icon"/>
+                </div>
+                <ul class="main-menu">
+                    <li><a href="#"><i class="fa fa-envelope"></i>Link Item 1</a></li>
+                    <li><a href="#"><i class="fa fa-cog"/>Link Item 3</a></li>
+                    <li><a href="#"><i class="fa fa-graduation-cap"/>Link Item 5</a></li>
+                    <li><a href="#"><i class="fa fa-search"/>Link Item 6</a></li>
+                </ul>
 
-                        <Menu onClick={handleClick} click={click}>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/">Home</MenuLink>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/about">About</MenuLink>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/recipe">Recipes</MenuLink>
-                            </MenuItem>
-                            <MenuItemBtn>
-                                {Button?(
-                                    <MenuLinkBtn to="/order-now">
-                                        <Button primary>Order Now</Button>
-                                    </MenuLinkBtn>
-                                ): (
-                                    <MenuLinkBtn to="/order-now">
-                                        <Button primary bigFont onClick={closeMenu}>Order Now</Button>
-                                    </MenuLinkBtn>
-                                )
-                                }
-                            </MenuItemBtn>
-                        </Menu>
-
-                    </NavbarContainer>
-
-
-                </Nav>
-            {/* </IconContext.Provider> */}
-        </div>
+                <div className="btn-wrapper">
+                    <button className="sign-in-btn"><i class="fa fa-home"/>Sign In</button>
+                    <p className='btn-seperator'>|</p>
+                    <a href='#' className="sign-up-btn">Sign Up</a>
+                </div>
+            </nav>
+        </>
     )
 }
 

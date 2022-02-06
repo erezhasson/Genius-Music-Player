@@ -1,14 +1,14 @@
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import AppWrapper from "./components/AppWrapper";
+import MusicPlayer from "./components/MusicPlayer";
 import {Navbar} from './components/Navbar';
-import GlobalStyles from './Globalstyles.js';
 
 function App() {
   return (
-    <Router>
-      <GlobalStyles/>
-      <Navbar/>
-
-    </Router>
+      <AppWrapper>
+        <Navbar/>
+        <MusicPlayer/>
+      </AppWrapper>
   );
 }
 

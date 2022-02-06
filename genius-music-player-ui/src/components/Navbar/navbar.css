@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'DeluxesBold';
+  src: local('DeluxesBold'), url(../../fonts/DeluxesBold/DeluxesBold.ttf) format('truetype');
+}
+
+ul,
+li,
+nav,
+a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-family: 'Tahoma';
+
+}
+
+.header-icon {
+  height: 40px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  border-bottom: 5px solid #222;
+  padding: 0.22em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f62459;
+  color: #fff;
+}
+
+.nav-header {
+  padding: 20px;
+  height: 40px;
+  background-color: var(--Genius_Color);
+  box-shadow: 0px 5px 9px -5px #000000;
+}
+
+#vertical-menu {
+  display: inline-block;
+  box-sizing: border-box;
+  background: rgb(12, 12, 12);
+  height: 100%;
+  grid-area: vertical-menu;
+}
+
+.main-menu {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 3px;
+  padding-top: 3px;
+  width: 250px;
+}
+
+.main-menu > li > a > i {
+  color: #fff;
+  width: 2em;
+  height: 100%;
+  line-height: 50px;
+  text-align: left;
+}
+
+.main-menu > li > a {
+  color: #fff;
+  /* background: #2a2a2a; */
+  line-height: 50px;
+  display: block;
+  padding: 0 1em;
+}
+
+.main-menu li:hover * {
+  color: var(--Genius_Color);
+}
+
+.btn-wrapper {
+  display: flex;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  gap: 15px;
+  align-items: center;
+
+
+}
+
+@media screen and (max-height: 400px) {
+    .btn-wrapper {
+      position: relative;
+    }
+}
+
+.sign-in-btn {
+	background-color: var(--Genius_Color);
+	border-radius: 5px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(19, 19, 19);
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding: 5px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+.sign-in-btn i{
+  margin-right: 5px;
+}
+
+.sign-up-btn {
+  align-self: flex-end;
+  background: transparent;
+  color: #fff;
+  align-self: center;
+  font-size: 13px;
+}
+
+
+.btn-seperator {
+  font-size: 20px;
+  color: #fff;
+  padding: 1px;
+  font-weight: lighter;
+}
